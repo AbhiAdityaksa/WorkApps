@@ -15,8 +15,6 @@ import java.util.List;
 public class RecyclerAdapterKedua extends RecyclerView.Adapter<RecyclerAdapterKedua.ReyclerViewHolder> {
     private final Context context;
 
-//    int[] gambar = {R.drawable.otot, R.drawable.ic_launcher_background, R.drawable.download, R.drawable.download, R.drawable.download, R.drawable.download,};
-//    String[] name={"samsung","nene","nono","jaj","kaka","kakak"};
     LayoutInflater inflater;
     List<WorkPediaMenu> pediaMenuList;
     public RecyclerAdapterKedua(Context context,List<WorkPediaMenu> pediaMenuList) {
@@ -27,7 +25,7 @@ public class RecyclerAdapterKedua extends RecyclerView.Adapter<RecyclerAdapterKe
 
     @Override
     public ReyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.item_menu1, parent, false);
+        View v = inflater.inflate(R.layout.item_menu2, parent, false);
 
         ReyclerViewHolder viewHolder = new ReyclerViewHolder(v);
         return viewHolder;
@@ -58,12 +56,10 @@ public class RecyclerAdapterKedua extends RecyclerView.Adapter<RecyclerAdapterKe
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-//                    Toast.makeText(context, "tes "+position, Toast.LENGTH_SHORT).show();
                     switch (position) {
                         case 0:
                             Intent intent = new Intent(context, MenuKedua.class);
                             context.startActivity(intent);
-//                            CharSequence text = tv1.getText();
                             Toast.makeText(context, "Open", Toast.LENGTH_SHORT).show();
                             break;
                         case 1:

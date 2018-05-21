@@ -13,8 +13,8 @@ import android.widget.Toast;
 public class RecyclerAdapterUtama extends RecyclerView.Adapter<RecyclerAdapterUtama.ReyclerViewHolder> {
     private final Context context;
 
-    int[] gambar = {R.drawable.otot, R.drawable.ic_launcher_background, R.drawable.download, R.drawable.download, R.drawable.download, R.drawable.download,};
-    String[] name={"samsung","nene","nono","jaj","kaka","kakak"};
+    int[] gambar = {R.drawable.utama, R.drawable.utama};
+    String[] name={"Full Body","Shoulder & Back"};
     LayoutInflater inflater;
 
     public RecyclerAdapterUtama(Context context) {
