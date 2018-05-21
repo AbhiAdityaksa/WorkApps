@@ -22,7 +22,6 @@ public class RecyclerAdapterKedua extends RecyclerView.Adapter<RecyclerAdapterKe
         inflater = LayoutInflater.from(context);
         this.pediaMenuList=pediaMenuList;
     }
-
     @Override
     public ReyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflater.inflate(R.layout.item_menu2, parent, false);
@@ -58,7 +57,7 @@ public class RecyclerAdapterKedua extends RecyclerView.Adapter<RecyclerAdapterKe
                     int position = getAdapterPosition();
                     switch (position) {
                         case 0:
-                            Intent intent = new Intent(context, MenuKedua.class);
+                            Intent intent = new Intent(context,JumpActivity.class);
                             context.startActivity(intent);
                             Toast.makeText(context, "Open", Toast.LENGTH_SHORT).show();
                             break;

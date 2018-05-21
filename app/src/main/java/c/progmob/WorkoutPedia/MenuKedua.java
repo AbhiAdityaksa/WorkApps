@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuKedua extends AppCompatActivity {
-
     RecyclerView rc2;
     List<WorkPediaMenu> pediaMenuList=new ArrayList<>();
     @Override
