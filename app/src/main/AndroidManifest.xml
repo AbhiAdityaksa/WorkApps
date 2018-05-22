@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="c.progmob.WorkoutPedia.MenuKedua" />
-        <activity android:name="c.progmob.WorkoutPedia.MenuUtama">
-        </activity>
-        <activity android:name="c.progmob.WorkoutPedia.SplashActivity">
+        <activity android:name=".MenuKedua" />
+        <activity android:name=".MenuUtama" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".jumping_activity"
+            android:label="@string/title_activity_jumping_activity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".JumpActivity"></activity>
     </application>
 
 </manifest>
