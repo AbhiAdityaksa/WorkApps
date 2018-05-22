@@ -1,10 +1,13 @@
 package c.progmob.WorkoutPedia;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class JumpActivity extends AppCompatActivity {
 //    private RecyclerView rv;
@@ -15,6 +18,7 @@ public class JumpActivity extends AppCompatActivity {
     TextView deskripsi;
     TextView judulu;
     ImageView gamabar;
+    Button btn_url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +27,21 @@ public class JumpActivity extends AppCompatActivity {
         deskripsi = findViewById(R.id.deskripsi);
         gamabar = findViewById(R.id.gambar);
         judulu = findViewById(R.id.judul);
+        btn_url = findViewById(R.id.btn_url);
 
         workPediaMenu=getIntent().getParcelableExtra("menu");
-        if (workPediaMenu==null){
-            Toast.makeText(this, "kosong", Toast.LENGTH_SHORT).show();
-        }
+
+        btn_url.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uriUrl = Uri.parse(workPediaMenu.getUrl());
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+//                startActivity(launchBrowser);
+                if (launchBrowser.resolveActivity(getPackageManager()) != null) {
+                    startActivity(launchBrowser);
+                }
+            }
+        });
         deskripsi.setText(workPediaMenu.getDeskripsi());
         gamabar.setImageResource(workPediaMenu.getGambar());
         judulu.setText(workPediaMenu.getNama());

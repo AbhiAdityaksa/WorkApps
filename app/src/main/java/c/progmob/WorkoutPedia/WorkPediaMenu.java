@@ -7,21 +7,24 @@ public class WorkPediaMenu implements Parcelable {
     private String nama;
     private String deskripsi;
     private int gambar;
+    private String url;
 
 
     public WorkPediaMenu() {
     }
 
-    public WorkPediaMenu(String Nama, String Deskripsi, int Gambar) {
-        nama = Nama;
-        deskripsi = Deskripsi;
-        gambar = Gambar;
+    public WorkPediaMenu(String nama, String deskripsi, int gambar, String url) {
+        this.nama = nama;
+        this.deskripsi = deskripsi;
+        this.gambar = gambar;
+        this.url = url;
     }
 
     protected WorkPediaMenu(Parcel in) {
         nama = in.readString();
         deskripsi = in.readString();
         gambar = in.readInt();
+        url = in.readString();
     }
 
     public static final Creator<WorkPediaMenu> CREATOR = new Creator<WorkPediaMenu>() {
@@ -60,6 +63,14 @@ public class WorkPediaMenu implements Parcelable {
         this.gambar = gambar;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -70,5 +81,6 @@ public class WorkPediaMenu implements Parcelable {
         parcel.writeString(nama);
         parcel.writeString(deskripsi);
         parcel.writeInt(gambar);
+        parcel.writeString(url);
     }
 }
