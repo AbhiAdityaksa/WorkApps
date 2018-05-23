@@ -18,10 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".jumping_activity"-->
-            <!--android:label="@string/title_activity_jumping_activity"-->
-            <!--android:theme="@style/AppTheme" />-->
         <activity android:name=".JumpActivity"></activity>
     </application>
 
