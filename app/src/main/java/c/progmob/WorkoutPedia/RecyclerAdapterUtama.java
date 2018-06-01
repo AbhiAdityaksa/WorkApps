@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class RecyclerAdapterUtama extends RecyclerView.Adapter<RecyclerAdapterUtama.ReyclerViewHolder> {
     private final Context context;
 
-    int[] gambar = {R.drawable.utama, R.drawable.utama};
+    int[] gambar = {R.drawable.full, R.drawable.back};
     String[] name={"Full Body","Shoulder & Back"};
     LayoutInflater inflater;
 
@@ -44,7 +44,7 @@ public class RecyclerAdapterUtama extends RecyclerView.Adapter<RecyclerAdapterUt
     }
 
     class ReyclerViewHolder extends RecyclerView.ViewHolder {
-        TextView tv1, tv2;
+        TextView tv1;
         ImageView imageView;
 
         public ReyclerViewHolder(View itemView) {
@@ -64,7 +64,10 @@ public class RecyclerAdapterUtama extends RecyclerView.Adapter<RecyclerAdapterUt
                             Toast.makeText(context, "Open", Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
-//                            Intent intent =
+                            Intent intent2 = new Intent(context, MenuKetiga.class);
+                            context.startActivity(intent2);
+                            Toast.makeText(context,"Open",Toast.LENGTH_SHORT).show();
+                            break;
                     }
                 }
             });
